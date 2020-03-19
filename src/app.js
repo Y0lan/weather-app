@@ -28,7 +28,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         siteTitle: "Help",
         title: 'Je sais pas',
-        message: "va regarder bébé : "
+        message: "va regarder : "
     })
 });
 

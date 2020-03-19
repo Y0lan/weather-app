@@ -9,11 +9,12 @@ const forecast = (city, latitude, longitude, callback) => {
         } else if( body.error) {
             callback({error: 'Impossible to get the weather for city'}, undefined);
         } else {
-            const {summary} = body.daily;
-            const {temperature, precipProbability} = body.currently;
+            const {summary} = body.hourly;
+            const {temperature, apparentTemperature, precipProbability} = body.currently;
             callback(undefined, {
                 summary,
                 temperature,
+                apparentTemperature,
                 precipProbability
             })
         }

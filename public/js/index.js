@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
             else {
                 locationField.textContent = data.location;
                 summaryField.textContent = data.summary;
-                dataField.textContent = "Il fait " + data.temperature + "°C et il y'a " + data.precipProbability + " % de chance de précipitation.";
+                dataField.textContent = "Il fait " + data.temperature + "°C (ressenti : " + data.apparentTemperature + "°C) et il y'a " + data.precipProbability + " % de chance de précipitation.";
             }
         })
     }).catch( (error) => {

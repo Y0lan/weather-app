@@ -48,13 +48,14 @@ app.get('/weather', (req, res) => {
 
     geocode(req.query.location, (error, {latitude, longitude, location}={}) => {
         if(error) return res.send(error);
-        forecast(location, latitude, longitude, (error, {summary, temperature, precipProbability}={}) => {
+        forecast(location, latitude, longitude, (error, {summary, temperature, precipProbability, apparentTemperature}={}) => {
             if(error) return res.send(error);
             res.send({
                 location,
-                summary,
                 temperature,
-                precipProbability
+                apparentTemperature,
+                precipProbability,
+                summary,
             })
         });
     });

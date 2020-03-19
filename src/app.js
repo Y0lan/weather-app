@@ -36,7 +36,7 @@ app.get('/about', (req, res) => {
     res.render('about', {
         siteTitle: "À propos",
         title : "À propos",
-        about : "Voilà les boules d'un tanuki"
+        about : "Voilà les boules d'un tanuki </br> Ce site utilise aussi mapbox et darksky pour récupérer les données. <br> Mais regardez moi ces boules!"
     })
 });
 
